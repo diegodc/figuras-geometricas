@@ -1,6 +1,14 @@
 # figuras-geometricas
 Ejercicio: Servicio REST de ingreso y registro de Figuras Geometricas. El servicio utiliza un cluster en MongoDB Atlas como repositorio.
 
+Frameworks utilizados:
+- Spring Boot
+- Spring Boot Data (MongoDB)
+
+Testing:
+- JUnit 5
+- Mockito
+
 Instrucciones para ejecutar localmente
 
 Requisitos:
