@@ -10,8 +10,12 @@ public class Circulo extends AbstractFigura {
      * @param diametro el diametro de este Circulo
      */
     public Circulo(Double diametro) {
-        super(Math.PI * Math.pow(diametro / 2, 2));
         this.diametro = diametro;
+    }
+
+    @Override
+    public Double getSuperficie() {
+        return Math.PI * Math.pow(diametro / 2, 2);
     }
 
     @Override

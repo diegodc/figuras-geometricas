@@ -11,20 +11,9 @@ public abstract class AbstractFigura implements FiguraGeometrica {
     @Id
     private String id;
 
-    private final Double superficie;
-
-    AbstractFigura(Double superficie) {
-        this.superficie = superficie;
-    }
-
     @Override
     public String getId() {
         return id;
-    }
-
-    @Override
-    public Double getSuperficie() {
-        return superficie;
     }
 
     @Override
@@ -43,15 +32,10 @@ public abstract class AbstractFigura implements FiguraGeometrica {
     }
 
     @Override
-    public String getTipo() {
-        return null;
-    }
-
-    @Override
     public String toString() {
         return getTipo()
                 + " de superficie "
-                + superficie
+                + getSuperficie()
                 + " con "
                 + getDescripcion();
     }

@@ -12,9 +12,13 @@ public class Triangulo extends AbstractFigura {
      * @param altura la altura del triangulo
      */
     public Triangulo(Double base, Double altura) {
-        super(base * altura / 2);
         this.base = base;
         this.altura = altura;
+    }
+
+    @Override
+    public Double getSuperficie() {
+        return base * altura / 2;
     }
 
     @Override

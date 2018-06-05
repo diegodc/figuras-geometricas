@@ -10,8 +10,12 @@ public class Cuadrado extends AbstractFigura {
      * @param longitudLado la longitud de cualquier lado del cuadrado.
      */
     public Cuadrado(Double longitudLado) {
-        super(longitudLado * longitudLado);
         this.longitudLado = longitudLado;
+    }
+
+    @Override
+    public Double getSuperficie() {
+        return Math.pow(longitudLado, 2);
     }
 
     @Override

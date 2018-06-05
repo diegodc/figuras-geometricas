@@ -1,28 +1,40 @@
 # figuras-geometricas
-Ejercicio: Servicio REST de ingreso y registro de Figuras Geometricas. El servicio utiliza un cluster en MongoDB Atlas como repositorio.
+## Servicio REST de ingreso y registro de Figuras Geometricas.
 
 Frameworks utilizados:
-- Spring Boot
-- Spring Boot Data (MongoDB)
+* Spring Boot
+* Spring Boot Data (MongoDB)
+
+Repositorio:
+* Cluster en MongoDB Atlas
 
 Testing:
-- JUnit 5
-- Mockito
+* JUnit 5
+* Mockito
 
-Instrucciones para ejecutar localmente
+---
+
+### Aplicacion desplegada en Heroku
+
+[figuras-geometricas-rest](https://figuras-geometricas-rest.herokuapp.com/figuras)
+
+---
+
+### Instrucciones para ejecutar localmente
 
 Requisitos:
 - Java 8 o posterior
 - Maven
 
-Comando:
+Descargar el proyecto y ejecutar este comando de Maven:
 
     mvn spring-boot:run
-    
-    
-Api REST:
 
-Ingresar Figuras
+---
+    
+## Api REST
+
+* ### Ingresar Figuras
 
     URL: http://localhost:8080/figuras
     METODO: POST
@@ -58,7 +70,7 @@ Ingresar Figuras
             "diametro": null
         }
 
-Obtener Figura por id
+* ### Obtener Figura por id
 
     URL: http://localhost:8080/figuras/{idFigura}
     METODO: GET
@@ -72,7 +84,7 @@ Obtener Figura por id
             "diametro": null
         }
         
- Obtener todas las Figuras registradas
+ * ### Obtener todas las Figuras registradas
 
     URL: http://localhost:8080/figuras
     METODO: GET
@@ -103,16 +115,13 @@ Obtener Figura por id
             "diametro": null
         }
     ]
-    
 
-Request Body para ingresar Figuras
+  ---
 
-Tipos permitidos: "cuadrado", "circulo", "triangulo"
+  Los parametros para crea la figura se pasan en un array.
 
-Parametros para cada tipo (los parametros se pasan en un array):
-
-Cuadrado: 1 solo parametro indicando la longitud de los lados.
-
-Circulo: 1 solo parametro indicando la longitud del diametro.
-
-Triangulo: 2 parametros indicando la base y la altura del triangulo respectivamente.
+| Tipos     | Parametros    | Ejemplo    |
+|-----------|---------------|------------|
+| Circulo   | diametro      | [1.2]      |
+| Cuadrado  | lado          | [3.4]      |
+| Triangulo | base y altura | [5.6, 7.8] |
