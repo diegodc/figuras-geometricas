@@ -1,14 +1,14 @@
 # figuras-geometricas
 ### Servicio REST de ingreso y registro de Figuras Geometricas.
 
-**Frameworks utilizados:**
+#### **Frameworks utilizados:**
 * Spring Boot
 * Spring Boot Data (MongoDB)
 
-**Repositorio:**
+#### **Repositorio:**
 * Cluster en MongoDB Atlas
 
-**Testing:**
+#### **Testing:**
 * JUnit 5
 * Mockito
 
@@ -32,9 +32,8 @@
 
     mvn spring-boot:run
 
----
-    
-### Api REST
+
+## Api REST
 
         
 #### Obtener todas las Figuras registradas
@@ -104,6 +103,7 @@
         }
 
 
+Otro ejemplo:
 
     URL: http://localhost:8080/figuras
     METODO: POST
@@ -129,7 +129,7 @@
         "parametros" : [parametros...]
      }
 
-  Nota: Los parametros para crea la figura se pasan en un array.
+  Nota: Los parametros para crear la figura se pasan en un array.
   
 
 | Tipos     | Parametros    | Ejemplo    |
