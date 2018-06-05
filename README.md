@@ -1,90 +1,43 @@
 # figuras-geometricas
-## Servicio REST de ingreso y registro de Figuras Geometricas.
+### Servicio REST de ingreso y registro de Figuras Geometricas.
 
-Frameworks utilizados:
+**Frameworks utilizados:**
 * Spring Boot
 * Spring Boot Data (MongoDB)
 
-Repositorio:
+**Repositorio:**
 * Cluster en MongoDB Atlas
 
-Testing:
+**Testing:**
 * JUnit 5
 * Mockito
 
----
+
+
 
 ### Aplicacion desplegada en Heroku
 
 [figuras-geometricas-rest](https://figuras-geometricas-rest.herokuapp.com/figuras)
 
----
+
+
 
 ### Instrucciones para ejecutar localmente
 
-Requisitos:
+**Requisitos:**
 - Java 8 o posterior
 - Maven
 
-Descargar el proyecto y ejecutar este comando de Maven:
+**Descargar el proyecto y ejecutar este comando de Maven:**
 
     mvn spring-boot:run
 
 ---
     
-## Api REST
+### Api REST
 
-* ### Ingresar Figuras
-
-    URL: http://localhost:8080/figuras
-    METODO: POST
-    Request Body:
-        {
-            "tipo" : "cuadrado",
-            "parametros" : [2.5]
-        }
-    Response Body:
-        {
-            "id": "5b15b7421300f43494fa8ecc",
-            "superficie": 6.25,
-            "base": 2.5,
-            "tipo": "Cuadrado",
-            "altura": 2.5,
-            "diametro": null
-        }
         
-    URL: http://localhost:8080/figuras
-    METODO: POST
-    Request Body:
-        {
-            "tipo" : "triangulo",
-            "parametros" : [2.5, 10.0]
-        }
-    Response Body:
-        {
-            "id": "5b15b9e01300f43494fa8ecd",
-            "superficie": 12.5,
-            "base": 2.5,
-            "altura": 10,
-            "tipo": "Triangulo",
-            "diametro": null
-        }
-
-* ### Obtener Figura por id
-
-    URL: http://localhost:8080/figuras/{idFigura}
-    METODO: GET
-    Response Body:
-        {
-            "id": "5b15b7421300f43494fa8ecc",
-            "superficie": 6.25,
-            "base": 2.5,
-            "tipo": "Cuadrado",
-            "altura": 2.5,
-            "diametro": null
-        }
-        
- * ### Obtener todas las Figuras registradas
+#### Obtener todas las Figuras registradas
 
     URL: http://localhost:8080/figuras
     METODO: GET
@@ -115,10 +68,69 @@ Descargar el proyecto y ejecutar este comando de Maven:
             "diametro": null
         }
     ]
+    
+ 
+#### Obtener Figura por id
 
-  ---
+    URL: http://localhost:8080/figuras/{idFigura}
+    METODO: GET
+    Response Body:
+        {
+            "id": "5b15b7421300f43494fa8ecc",
+            "superficie": 6.25,
+            "base": 2.5,
+            "tipo": "Cuadrado",
+            "altura": 2.5,
+            "diametro": null
+        }
 
-  Los parametros para crea la figura se pasan en un array.
+#### Ingresar Figuras
+
+    URL: http://localhost:8080/figuras
+    METODO: POST
+    Request Body:
+        {
+            "tipo" : "cuadrado",
+            "parametros" : [2.5]
+        }
+    Response Body:
+        {
+            "id": "5b15b7421300f43494fa8ecc",
+            "superficie": 6.25,
+            "base": 2.5,
+            "tipo": "Cuadrado",
+            "altura": 2.5,
+            "diametro": null
+        }
+
+
+
+    URL: http://localhost:8080/figuras
+    METODO: POST
+    Request Body:
+        {
+            "tipo" : "triangulo",
+            "parametros" : [2.5, 10.0]
+        }
+    Response Body:
+        {
+            "id": "5b15b9e01300f43494fa8ecd",
+            "superficie": 12.5,
+            "base": 2.5,
+            "altura": 10,
+            "tipo": "Triangulo",
+            "diametro": null
+        }
+
+#### Detalle del Request Body
+
+    {
+        "tipo" : <tipo>,
+        "parametros" : [parametros...]
+     }
+
+  Nota: Los parametros para crea la figura se pasan en un array.
+  
 
 | Tipos     | Parametros    | Ejemplo    |
 |-----------|---------------|------------|
